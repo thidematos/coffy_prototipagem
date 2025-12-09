@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Coffee, MapPin, Star, Bell, Filter, Navigation, Plus, CreditCard, ChevronRight } from 'lucide-react';
+import { Coffee, MapPin, Star, Bell, Filter, Navigation, Plus, CreditCard, ChevronRight, QrCode } from 'lucide-react';
 
 // --- Componente: Ícone de Xícara com Preenchimento Variável (Nota 0-5) ---
 const RatingCupIcon = ({ rating, size = 24 }) => {
@@ -145,8 +145,9 @@ const HomeScreen = () => {
                     <p className="text-xl font-bold text-[#F2F2F2]">340 <span className="text-xs font-normal opacity-70">pts</span></p>
                 </div>
             </div>
-            <button className="bg-[#F2C166] text-[#402B29] text-xs font-bold py-2 px-3 rounded-lg hover:bg-[#D97218] transition-colors">
-                Trocar
+            {/* Botão de QR Code sem container (Apenas Ícone) */}
+            <button className="text-[#F2C166] hover:text-[#D97218] transition-colors transform active:scale-95 p-2">
+                <QrCode size={32} strokeWidth={2.5} />
             </button>
         </div>
 
